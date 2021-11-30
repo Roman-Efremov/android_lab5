@@ -58,12 +58,12 @@ public class MainActivity extends AppCompatActivity {
         searchRecords.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String name) {
-                return true;
+                return false;
             }
 
             @Override
             public boolean onQueryTextChange(String name) {
-                if(!name.equals(""))
+                if (!name.equals(""))
                     findByNameOrSurname(db, name);
                 else
                     recordsFoundValue.setText("0");

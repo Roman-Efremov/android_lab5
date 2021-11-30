@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
 import java.util.List;
@@ -16,10 +17,10 @@ public interface UserDao {
     @Query("SELECT * FROM user WHERE name LIKE :name || '%' OR surname LIKE :name || '%'")
     LiveData<List<User>> findByNameOrSurname(String name);
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insert(User user);
 
-    @Insert
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertAll(User... users);
 
     @Delete
