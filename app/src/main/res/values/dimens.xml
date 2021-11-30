@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="vertical_spacing">64dp</dimen>
+    <dimen name="horizontal_spacing">32dp</dimen>
+    <dimen name="elements_spacing">12dp</dimen>
+    <dimen name="text_size">16sp</dimen>
+</resources>
